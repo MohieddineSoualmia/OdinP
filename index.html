@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllRecipies - Our Signature Dishes</title>
+    <style>
+        :root {
+            --primary-color: #e67e22;
+            --secondary-color: #2c3e50;
+            --accent-color: #16a085;
+            --bg-color: #f9f3e9;
+            --text-color: #333;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        h1 {
+            color: var(--secondary-color);
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+        
+        .dishes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .dish-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .dish-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .dish-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .dish-link {
+            display: block;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .dish-link::before {
+            content: "🍴 ";
+        }
+        
+        .dish-link::after {
+            content: "";
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+        
+        .dish-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .dish-link:hover::after {
+            width: 80%;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Signature Dishes</h1>
+    
+    <div class="dishes-grid">
+        <div class="dish-card">
+            <img src="images/245775-spaghetti-alla-carbonara-the-traditional-italian-recipe-DDMFS-4x3-879c32ee3cfb463582e3e6230e311029.webp" alt="Spaghetti Carbonara" class="dish-img">
+            <a href="./recipies/spaghetti.html" class="dish-link">Spaghetti Carbonara</a>
+        </div>
+        
+        <div class="dish-card">
+            <img src="images/image.webp" alt="Beef Tacos" class="dish-img">
+            <a href="./recipies/Tacos.html" class="dish-link">Beef Tacos</a>
+        </div>
+        
+        <div class="dish-card">
+            <img src="images/14385-pasta-salad-DDMFS-4x3-28eb5dbe00624780b36cabfef15ca183.webp" alt="Pasta Salad" class="dish-img">
+            <a href="./recipies/Salad.html" class="dish-link">Pasta Salad</a>
+        </div>
+        
+        <div class="dish-card">
+            <img src="images/212940-Chicken-Arroz-Caldo-Chicken-Rice-Porridge-ddmfs-4x3-694b22859e6848458d30e4276a027ecb.webp" alt="Chicken Arroz Caldo" class="dish-img">
+            <a href="./recipies/Chicken.html" class="dish-link">Chicken Arroz Caldo</a>
+        </div>
+        
+        <div class="dish-card">
+            <img src="images/6225714-chewy-chocolate-cookies-LauraElizabeth-1x1-1-2000-ef2c786b53934b73914ffa9d695a8bd2.jpg" alt="Chocolate Cookies" class="dish-img">
+            <a href="./recipies/Chocolate.html" class="dish-link">Chewy Chocolate Cookies</a>
+        </div>
+    </div>
+    
+    <footer>
+        &copy; 2025 AllRecipies. All rights reserved.
+    </footer>
+</body>
+</html>
